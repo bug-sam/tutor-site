@@ -1,0 +1,13 @@
+@media all and (min-width: 480px) {
+  .User {
+    padding: 60px 0;
+  }
+
+  .User form {
+    max-width: 500px;
+  }
+  
+  .formItem {
+    margin-top: 20px;
+  }
+}
