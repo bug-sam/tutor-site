@@ -64,7 +64,7 @@ export default function Login() {
           Login
         </Button>
         <p className={styles.formItem}>
-          Don't have an account?
+          Don&apos;t have an account?
           <Link href="/create_account">
             <a> Create one now!</a>
           </Link>
