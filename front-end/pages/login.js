@@ -24,7 +24,7 @@ export default function Login() {
         password: password,
       })
     }
-    fetch('http://localhost:8000/v1/users/' + username + "/check/", requestOptions)
+    fetch('http://sjt75.pythonanywhere.com/v1/users/' + username + "/check/", requestOptions)
       .then(res => res.json())
       .then(
         (result) => {

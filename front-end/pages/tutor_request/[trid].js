@@ -12,11 +12,11 @@ export default function TutorRequest() {
 	const [isLoaded, setIsLoaded] = useState(false);
 
   const router = useRouter()
-  const { trid } = router.query
 
   useEffect(() => {
+    const { trid } = router.query
     if (trid) {
-      fetch("http://localhost:8000/v1/tutor_requests/" + trid + "/")
+      fetch("http://sjt75.pythonanywhere.com/v1/tutor_requests/" + trid + "/")
         .then(res => res.json())
         .then(
           (result) => {
@@ -38,7 +38,7 @@ export default function TutorRequest() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(tutorRequest)
     };
-    fetch('http://localhost:8000/v1/tutor_requests/' + tutorRequest.id + "/", requestOptions)
+    fetch('http://sjt75.pythonanywhere.com/v1/tutor_requests/' + tutorRequest.id + "/", requestOptions)
         .then(res => res.json())
         .then(data => setEditing(false));
   }

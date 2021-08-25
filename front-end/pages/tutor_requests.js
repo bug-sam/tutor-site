@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import Button from "react-bootstrap/Button";
 import TutorRequestCard from '../components/tutor_request/TutorRequestCard'
 import styles from '../styles/TutorRequests.module.css'
 
@@ -10,7 +12,7 @@ export default function TutorRequests() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:8000/v1/tutor_requests/")
+    fetch("http://sjt75.pythonanywhere.com/v1/tutor_requests/")
       .then(res => res.json())
       .then(
         (result) => {
@@ -30,18 +32,23 @@ export default function TutorRequests() {
     return <div>Loading...</div>;
   } else {
     return (
-      <div className={styles.requests}>
-        {requests.map((request) => {
-          return (
-            <TutorRequestCard
-              key={request.id}
-              id={request.id}
-              title={request.title}
-              body={request.description}
-            ></TutorRequestCard>
-          )
-        })}
-      </div>
+      <>
+        <Link href="/create_request">
+          <Button>Create New Request</Button>
+        </Link>
+        <div className={styles.requests}>
+          {requests.map((request) => {
+            return (
+              <TutorRequestCard
+                key={request.id}
+                id={request.id}
+                title={request.title}
+                body={request.description}
+              ></TutorRequestCard>
+            )
+          })}
+        </div>
+      </>
     )
   }
 }

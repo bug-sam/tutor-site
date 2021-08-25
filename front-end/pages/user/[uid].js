@@ -15,7 +15,7 @@ export default function User() {
   useEffect(() => {
     const { uid } = router.query;
     if (uid) {
-      fetch("http://localhost:8000/v1/users/" + uid + "/")
+      fetch("http://sjt75.pythonanywhere.com/v1/users/" + uid + "/")
         .then(res => res.json())
         .then(
           (result) => {
@@ -37,7 +37,7 @@ export default function User() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(user)
     };
-    fetch('http://localhost:8000/v1/users/' + user.username + "/", requestOptions)
+    fetch('http://sjt75.pythonanywhere.com/v1/users/' + user.username + "/", requestOptions)
         .then(res => res.json())
         .then(data => setEditing(false));
   }

@@ -14,8 +14,7 @@ export default function Navbar() {
 
   function logout() {
     localStorage.removeItem('user');
-    router.push("/");
-    location.reload();
+    location.replace("/");
   }
 
   const nonLoggedIn = (
