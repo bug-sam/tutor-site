@@ -13,8 +13,12 @@ export default function Home() {
   const nonLoggedIn = (
     <>
       <h2>
-        Welcome to tutor site!
+        Welcome to FindMyTutor!
       </h2>
+      <p>
+        On this site you can create tutor requests to get help on subjects you are struggling with.
+        You can also browse the list of open requests and apply to become a tutor for someone else.
+      </p>
       <p>
         <Link href="/login"><a>Login </a></Link>
         or

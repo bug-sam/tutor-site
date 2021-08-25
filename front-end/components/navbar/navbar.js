@@ -57,7 +57,7 @@ export default function Navbar() {
         <li className={styles.navitem}>
           <Link href="/">
             <a className={styles.navlink}>
-              Tutor Site
+              FindMyTutor
             </a>
           </Link>
         </li>
