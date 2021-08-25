@@ -16,7 +16,7 @@ export default function TutorRequest() {
   useEffect(() => {
     const { trid } = router.query
     if (trid) {
-      fetch("http://sjt75.pythonanywhere.com/v1/tutor_requests/" + trid + "/")
+      fetch("https://sjt75.pythonanywhere.com/v1/tutor_requests/" + trid + "/")
         .then(res => res.json())
         .then(
           (result) => {
@@ -38,7 +38,7 @@ export default function TutorRequest() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(tutorRequest)
     };
-    fetch('http://sjt75.pythonanywhere.com/v1/tutor_requests/' + tutorRequest.id + "/", requestOptions)
+    fetch('https://sjt75.pythonanywhere.com/v1/tutor_requests/' + tutorRequest.id + "/", requestOptions)
         .then(res => res.json())
         .then(data => setEditing(false));
   }

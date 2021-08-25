@@ -12,7 +12,7 @@ export default function TutorRequests() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    fetch("http://sjt75.pythonanywhere.com/v1/tutor_requests/")
+    fetch("https://sjt75.pythonanywhere.com/v1/tutor_requests/")
       .then(res => res.json())
       .then(
         (result) => {

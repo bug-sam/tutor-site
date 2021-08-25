@@ -31,7 +31,7 @@ export default function Login() {
           creator: user
         })
     };
-    fetch('http://sjt75.pythonanywhere.com/v1/tutor_requests/', requestOptions)
+    fetch('https://sjt75.pythonanywhere.com/v1/tutor_requests/', requestOptions)
       .then(res => res.json())
       .then(
         (result) => {

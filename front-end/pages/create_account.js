@@ -37,7 +37,7 @@ export default function Login() {
           email: email
         })
     };
-    fetch('http://sjt75.pythonanywhere.com/v1/users/', requestOptions)
+    fetch('https://sjt75.pythonanywhere.com/v1/users/', requestOptions)
       .then(res => res.json())
       .then(
         (result) => {
